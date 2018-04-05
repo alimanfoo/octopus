@@ -88,6 +88,7 @@ private:
         std::vector<SampleName> samples;
         InputRegionMap regions;
         std::vector<GenomicRegion::ContigName> contigs;
+        boost::optional<Path> temp_directory;
         boost::optional<ReadSetProfile> reads_profile_;
         ReadPipe read_pipe;
         CallerFactory caller_factory;
@@ -96,7 +97,6 @@ private:
         VcfWriter output;
         boost::optional<unsigned> num_threads;
         std::size_t read_buffer_size;
-        boost::optional<Path> temp_directory;
         ProgressMeter progress_meter;
         bool sites_only;
         boost::optional<VcfWriter> filtered_output;

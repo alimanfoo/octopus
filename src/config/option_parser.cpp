@@ -577,6 +577,10 @@ OptionMap parse_options(const int argc, const char** argv)
     ("filter-vcf",
      po::value<fs::path>(),
      "Filter the given Octopus VCF without calling")
+    
+    ("forest-file",
+     po::value<fs::path>(),
+     "Trained Ranger random forest file")
     ;
     
     po::options_description all("octopus options");
